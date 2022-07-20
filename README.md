@@ -1,6 +1,10 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0660bf5c-6cb2-48d0-b691-f5670ed9326d/deploy-status)](https://app.netlify.com/sites/nextjs-template-sharebrowse/deploys)
+
 # Next.js Template
 
 ShareBrowse, Inc.の Next.js テンプレート
+
+[デモ](https://nextjs-template.sharebrowse.tech/)
 
 ## 技術概要
 
