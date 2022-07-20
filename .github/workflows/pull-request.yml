@@ -1,0 +1,8 @@
+name: Checks on a Pull Request
+"on": pull_request
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn && yarn inspect
