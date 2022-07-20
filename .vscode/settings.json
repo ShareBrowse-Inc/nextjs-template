@@ -1,0 +1,32 @@
+{
+  // editor
+  "editor.renderControlCharacters": true,
+  "editor.showFoldingControls": "always",
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.size": "fit",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+  "editor.quickSuggestions": { "strings": true },
+  // files
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  // workbench
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "readme",
+  // typescript
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // others
+  "explorer.incrementalNaming": "smart",
+  "search.showLineNumbers": true,
+  "debug.inlineValues": "on",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}

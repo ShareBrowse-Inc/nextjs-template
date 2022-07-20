@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Template
 
-## Getting Started
+ShareBrowse, Inc.の Next.js テンプレート
 
-First, run the development server:
+## 技術概要
 
-```bash
-npm run dev
-# or
+- Next.js（React フレームワーク）
+- TypeScript（型導入）
+- Prettier（コードの整形）
+- ESLint（構文チェック）
+
+## 依存関係
+
+以下のいずれかの前提環境が必要
+
+- Node.js v16.x
+- yarn v1.x
+
+## 開発環境構築
+
+以下の方法で環境構築を行う
+
+### 方法
+
+- 以下のコマンドをターミナルで実行
+
+```shell
+git clone git@github.com:ShareBrowse-Inc/nextjs-template.git
+yarn
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### VSCode をエディターとして利用している方へ
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+開発時に推奨する拡張機能を本リポジトリにて共有しているので、インストールする（方法はこのページを[参照](https://qiita.com/Glavis/items/c3dac07e4bcf5c50db0a#%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)）
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## ブランチ運用
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[Gitflow ワークフロー](https://www.atlassian.com/ja/git/tutorials/comparing-workflows/gitflow-workflow)に準じて運用する
 
-## Learn More
+## コミットメッセージ
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[gitmoji](https://gitmoji.dev/)に準じて絵文字 prefix をつけたコミットメッセージを書くことを推奨（[cli](https://github.com/carloscuesta/gitmoji)もある）
