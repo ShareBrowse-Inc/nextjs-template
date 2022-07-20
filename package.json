@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "inspect": "npm-run-all -l -c inspect:*",
+    "inspect:lint": "next lint --dir src",
+    "inspect:format": "prettier --check .",
+    "fix": "npm-run-all -l -c fix:*",
+    "fix:lint": "next lint --dir src --fix",
+    "fix:format": "yarn inspect:format --write"
   },
   "dependencies": {
     "next": "12.2.2",
