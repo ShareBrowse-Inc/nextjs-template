@@ -1,4 +1,4 @@
-name: Checks on a Pull Request
+name: Check syntax and find problems
 on:
   workflow_dispatch:
   pull_request:
