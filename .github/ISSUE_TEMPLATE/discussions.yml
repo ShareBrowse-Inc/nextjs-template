@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📝 質問や議論はこちら / Ask a question and discuss
+    url: https://github.com/ShareBrowse-Inc/nextjs-template/discussions
+    about: メンバーに質問や議論をする / Ask questions and discuss with other community members
