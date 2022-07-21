@@ -28,5 +28,8 @@
   "debug.inlineValues": "on",
   "[markdown]": {
     "files.trimTrailingWhitespace": false
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-issue-config.json": "file:///Users/yoshikatsu/Development/ShareBrowse-Inc/nextjs-template/.github/ISSUE_TEMPLATE/config.yml"
   }
 }
