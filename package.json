@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "analyze": "ANALYZE=true next build",
     "inspect": "npm-run-all -l -c inspect:*",
     "inspect:lint": "next lint --dir src",
     "inspect:format": "prettier --check . --ignore-path .gitignore",
