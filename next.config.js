@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  i18n: {
+    locales: ["en", "ja"],
+    defaultLocale: "en",
+  },
 };
 
 const withBundleAnalyzer =
@@ -10,4 +14,6 @@ const withBundleAnalyzer =
     : (config) => config;
 
 module.exports = nextConfig;
-module.exports = withBundleAnalyzer({});
+
+// FIXME: 有効にするとi18nが機能しなくなるためコメントアウトしている
+// module.exports = withBundleAnalyzer({});
