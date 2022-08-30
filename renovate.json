@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "group:allNonMajor"],
   "labels": ["dependencies"],
   "packageRules": [
     {
@@ -8,5 +8,7 @@
     }
   ],
   "timezone": "Asia/Tokyo",
-  "schedule": ["every weekend"]
+  "schedule": ["every weekend"],
+  "vulnerabilityAlerts": { "enabled": true },
+  "lockFileMaintenance": { "enabled": true }
 }
