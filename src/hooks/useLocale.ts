@@ -1,5 +1,5 @@
-import en from "/locales/en";
-import ja from "/locales/ja";
+import en from "public/locales/en";
+import ja from "public/locales/ja";
 import { useRouter } from "next/router";
 
 export const useLocale = () => {
