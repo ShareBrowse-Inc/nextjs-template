@@ -6,10 +6,15 @@ import styles from "../styles/Home.module.css";
 import { LocaleProps } from "@/types/locale";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useTranslation, Trans } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home = (contents: LocaleProps) => {
   const router = useRouter();
   const { locale, locales, defaultLocale } = router;
+  const { t } = useTranslation("common");
+
+  const changeTo = router.locale === "en" ? "ja" : "en";
 
   return (
     <div className={styles.container}>
@@ -19,9 +24,13 @@ const Home = (contents: LocaleProps) => {
         <p>Default locale: {defaultLocale}</p>
         <p>Configured locales: {JSON.stringify(locales)}</p>
 
-        <h1 className={styles.title}>{contents.TITLE}</h1>
+        <Link href="/" locale={changeTo}>
+          <button>{t("change-locale", { changeTo })}</button>
+        </Link>
 
-        <p className={styles.description}>{contents.DESCRIPTION}</p>
+        <h1 className={styles.title}>{t("title")}</h1>
+
+        <p className={styles.description}>{t("description")}</p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -64,5 +73,12 @@ const Home = (contents: LocaleProps) => {
     </div>
   );
 };
+
+//export const getStaticProps = async ({ locale }: { locale: string }) => ({
+export const getServerSideProps = async ({ locale }: { locale: string }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default Home;
