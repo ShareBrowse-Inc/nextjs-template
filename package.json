@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "analyze": "ANALYZE=true next build",
     "inspect": "npm-run-all -l -c inspect:*",
     "inspect:lint": "next lint --dir src",
