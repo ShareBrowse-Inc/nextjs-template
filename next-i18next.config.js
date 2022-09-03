@@ -1,4 +1,5 @@
 const path = require("path");
+
 const localePath = path.resolve("./public/locales");
 
 module.exports = {
