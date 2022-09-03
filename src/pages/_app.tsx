@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           locale: t("locale"),
         }}
       />
-      <Component {...pageProps} {...t} />
+      <Component {...pageProps} />
     </>
   );
 }

@@ -1,17 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import { LocaleProps } from "@/types/locale";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useTranslation, Trans } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Home = (contents: LocaleProps) => {
+const Home: NextPage = () => {
   const router = useRouter();
-  const { locale, locales, defaultLocale } = router;
   const { t } = useTranslation("common");
 
   const changeTo = router.locale === "en" ? "ja" : "en";
@@ -19,11 +16,6 @@ const Home = (contents: LocaleProps) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1>Index page</h1>
-        <p>Current locale: {locale}</p>
-        <p>Default locale: {defaultLocale}</p>
-        <p>Configured locales: {JSON.stringify(locales)}</p>
-
         <Link href="/" locale={changeTo}>
           <button>{t("change-locale", { changeTo })}</button>
         </Link>
