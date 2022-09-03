@@ -36,7 +36,6 @@
     "@storybook/manager-webpack5": "6.5.10",
     "@storybook/react": "6.5.10",
     "@storybook/testing-library": "0.0.13",
-    "@types/accept-language-parser": "^1.5.3",
     "@types/node": "18.7.13",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
