@@ -1,0 +1,12 @@
+{
+  "url": "https://corp.sharebrowse.tech/ja",
+  "title": "Next.js テンプレート in ShareBrowse,Inc.",
+  "description": "我々は「オンラインコミュニケーションの可能性をハックする」をミッションに掲げ、オンラインコミュニケーションの可能性をあらゆるテクノロジーとアイデアでハックし、世界中の人々に愛されるプロダクトをつくります。",
+  "locale": "ja_JP",
+  "alt_locale": "en_US",
+  "twitter": "@sharebrowse_jp",
+  "facebook": "App-ID（15文字の半角数字）",
+  "change-locale": "\"{{changeTo}}\" に変更",
+  "error-with-status": "A {{statusCode}} error occurred on server",
+  "error-without-status": "An error occurred on the server"
+}
