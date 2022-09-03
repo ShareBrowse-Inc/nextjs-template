@@ -2,11 +2,12 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-import { useLocale } from "@/hooks/useLocale";
+import { useTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { t } = useLocale();
+  const { t } = useTranslation("common");
 
   return (
     <>
@@ -14,8 +15,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:locale" content={t.LOCALE} />
-        <meta property="og:locale:alternate" content={t.ALT_LOCALE} />
+        <meta property="og:locale" content={t("locale")} />
+        <meta property="og:locale:alternate" content={t("alt_locale")} />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#faa603" />
         <meta name="theme-color" content="#faa603" />
@@ -26,24 +27,24 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <DefaultSeo
-        titleTemplate={`%s | ${t.TITLE}`}
+        titleTemplate={`%s | ${t("title")}`}
         title={undefined}
-        defaultTitle={t.TITLE}
-        description={t.DESCRIPTION}
-        canonical={t.URL}
+        defaultTitle={t("title")}
+        description={t("description")}
+        canonical={t("url")}
         twitter={{
-          handle: t.TWITTER,
+          handle: t("twitter"),
           //site: t.TWITTER,
           cardType: "summary_large_image",
         }}
         facebook={{
-          appId: t.FACEBOOK,
+          appId: t("facebook"),
         }}
         openGraph={{
-          url: t.URL,
+          url: t("url"),
           type: "website",
-          title: t.TITLE,
-          description: t.DESCRIPTION,
+          title: t("title"),
+          description: t("description"),
           images: [
             {
               url: "/ogp.png",
@@ -52,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               alt: "ShareBrowse",
             },
           ],
-          locale: t.LOCALE,
+          locale: t("locale"),
         }}
       />
       <Component {...pageProps} {...t} />
@@ -60,4 +61,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
