@@ -11,9 +11,13 @@ import acceptLanguageParser from "accept-language-parser";
 function selectLanguage(localeHeader: string | null) {
   // 選択肢
   const languages = ["en", "ja"];
-  const detectedLang = acceptLanguageParser.pick(languages, localeHeader ?? "en-US", {
-    loose: true,
-  });
+  const detectedLang = acceptLanguageParser.pick(
+    languages,
+    localeHeader ?? "en-US",
+    {
+      loose: true,
+    }
+  );
   // いずれも該当しない場合はenを選ぶ
   return detectedLang ?? languages[0];
 }
@@ -32,9 +36,13 @@ export function middleware(request: NextRequest) {
   const PUBLIC_FILE = /\.(.*)$/;
 
   const shouldHandleLocale =
-    !PUBLIC_FILE.test(pathname) && !pathname.includes("/api/") && locale === "default";
+    !PUBLIC_FILE.test(pathname) &&
+    !pathname.includes("/api/") &&
+    locale === "default";
 
   const language = selectLanguage(request.headers.get("accept-language"));
 
-  return shouldHandleLocale ? NextResponse.redirect(`/${language}${pathname}${search}`) : undefined;
+  return shouldHandleLocale
+    ? NextResponse.redirect(`/${language}${pathname}${search}`)
+    : undefined;
 }
