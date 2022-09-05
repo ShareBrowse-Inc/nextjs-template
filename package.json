@@ -15,7 +15,9 @@
     "fix:lint": "next lint --dir src --fix",
     "fix:format": "yarn inspect:format --write",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "docker:build": "docker build -t sharebrowse-nextjs-template .",
+    "docker:run": "docker run -p 3000:3000 sharebrowse-nextjs-template"
   },
   "dependencies": {
     "next": "12.2.5",
