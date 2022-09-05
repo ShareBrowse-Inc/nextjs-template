@@ -26,6 +26,8 @@ const Home: NextPage = () => {
 
         <p className={styles.description}>{t("description")}</p>
 
+        <p className="">Cloud Run already Deploy</p>
+
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
