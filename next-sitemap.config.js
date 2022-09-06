@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://sharebrowse.tech",
+  siteUrl: "https://nextjs-template.sharebrowse.tech",
   generateRobotsTxt: true,
 };
