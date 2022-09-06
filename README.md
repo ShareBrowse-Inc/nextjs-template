@@ -6,6 +6,8 @@ ShareBrowse, Inc.の Next.js テンプレート
 
 [デモ](https://nextjs-template.sharebrowse.tech/)
 
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/ShareBrowse-Inc/nextjs-template.git)
+
 ## 技術概要
 
 - Next.js（React フレームワーク）
