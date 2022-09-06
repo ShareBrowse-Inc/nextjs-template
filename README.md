@@ -1,10 +1,10 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0660bf5c-6cb2-48d0-b691-f5670ed9326d/deploy-status)](https://app.netlify.com/sites/nextjs-template-sharebrowse/deploys)
-
 # Next.js Template
 
 ShareBrowse, Inc.の Next.js テンプレート
 
 [デモ](https://nextjs-template.sharebrowse.tech/)
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/ShareBrowse-Inc/nextjs-template.git)
 
 ## 技術概要
 
@@ -12,6 +12,7 @@ ShareBrowse, Inc.の Next.js テンプレート
 - TypeScript（型導入）
 - Prettier（コードの整形）
 - ESLint（構文チェック）
+- Storybook（コンポーネントカタログ）
 
 ## 依存関係
 

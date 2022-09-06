@@ -30,6 +30,7 @@
     "files.trimTrailingWhitespace": false
   },
   "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*",
     "https://json.schemastore.org/github-issue-config.json": "file:///Users/yoshikatsu/Development/ShareBrowse-Inc/nextjs-template/.github/ISSUE_TEMPLATE/config.yml"
   }
 }
