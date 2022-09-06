@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0660bf5c-6cb2-48d0-b691-f5670ed9326d/deploy-status)](https://app.netlify.com/sites/nextjs-template-sharebrowse/deploys)
-
 # Next.js Template
 
 ShareBrowse, Inc.の Next.js テンプレート
@@ -14,6 +12,7 @@ ShareBrowse, Inc.の Next.js テンプレート
 - TypeScript（型導入）
 - Prettier（コードの整形）
 - ESLint（構文チェック）
+- Storybook（コンポーネントカタログ）
 
 ## 依存関係
 
