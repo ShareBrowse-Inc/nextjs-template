@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        env:
-          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Setup Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.6.0
@@ -43,6 +41,4 @@ jobs:
           region: ${{ env.REGION }}
 
       - name: Show Output
-        run: |-
-          echo ${{ steps.nextjs-template.outputs.url }}
-          echo ${{ secrets.NEXT_PUBLIC_GA_ID }}
+        run: echo ${{ steps.nextjs-template.outputs.url }}
