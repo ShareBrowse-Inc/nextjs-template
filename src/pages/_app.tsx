@@ -1,13 +1,19 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import Script from "next/script";
 
 import { useTranslation } from "next-i18next";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 
+import { usePageView } from "@/hooks/usePageView";
+import { GA_TRACKING_ID } from "@/lib/gtag";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const { t } = useTranslation("common");
+  usePageView();
 
   return (
     <>
@@ -40,6 +46,29 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+
+      {GA_TRACKING_ID && (
+        <>
+          <Script
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <Script
+            id="gtag-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </>
+      )}
       <DefaultSeo
         titleTemplate={`%s | ${t("title")}`}
         title={undefined}
@@ -70,6 +99,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           locale: t("locale"),
         }}
       />
+
       <Component {...pageProps} />
     </>
   );
