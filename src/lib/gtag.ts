@@ -20,7 +20,7 @@ export const event = ({ action, category, label, value }: Props) => {
 
   window.gtag("event", action, {
     event_category: category,
-    event_label: label,
+    event_label: JSON.stringify(label),
     value: value,
   });
 };

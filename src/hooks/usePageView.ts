@@ -3,10 +3,14 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import * as gtag from "@/lib/gtag";
+import { GA_TRACKING_ID } from "@/lib/gtag";
 
 export const usePageView = () => {
   const router = useRouter();
+
   useEffect(() => {
+    if (!GA_TRACKING_ID) return;
+
     const handleRouteChange = (url: string) => {
       gtag.pageview(url);
     };
