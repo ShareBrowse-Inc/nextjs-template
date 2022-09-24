@@ -1,4 +1,5 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
@@ -6,8 +7,11 @@ import { useTranslation } from "next-i18next";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 
+import { usePageView } from "@/hooks/usePageView";
+
 function MyApp({ Component, pageProps }: AppProps) {
   const { t } = useTranslation("common");
+  usePageView();
 
   return (
     <>
