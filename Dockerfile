@@ -1,7 +1,5 @@
 # 参考：https://github.com/vercel/next.js/tree/canary/examples/with-docker
 
-ARG NEXT_PUBLIC_GA_ID=""
-
 # Install dependencies only when needed
 FROM node:18-alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
@@ -28,7 +26,11 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID} yarn build
+ARG NEXT_PUBLIC_GA_ID=""
+
+RUN touch .env.production
+RUN echo `NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID}` >> .env.production
+RUN yarn build
 
 # If using npm comment out above and use below instead
 # RUN npm run build

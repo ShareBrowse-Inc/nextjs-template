@@ -4,6 +4,7 @@ env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT }}
   SERVICE: nextjs-template
   REGION: us-central1
+  NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
 on:
   workflow_dispatch:
@@ -30,7 +31,7 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} . --build-arg NEXT_PUBLIC_GA_ID=${{ secret.NEXT_PUBLIC_GA_ID }}
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} . --build-arg NEXT_PUBLIC_GA_ID=${{ env.NEXT_PUBLIC_GA_ID }}
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
       - name: Deploy to Cloud Run
         id: nextjs-template
