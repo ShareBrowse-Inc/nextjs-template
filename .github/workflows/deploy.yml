@@ -30,7 +30,7 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} .
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} . --build-arg NEXT_PUBLIC_GA_ID=${{ secret.NEXT_PUBLIC_GA_ID }}
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
       - name: Deploy to Cloud Run
         id: nextjs-template
