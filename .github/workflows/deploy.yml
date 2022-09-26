@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        env:
-          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
 
       - name: Setup Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.6.0
@@ -32,7 +30,7 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} .
+          docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} . --build-arg NEXT_PUBLIC_GA_ID=${{ secret.NEXT_PUBLIC_GA_ID }}
           docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
       - name: Deploy to Cloud Run
         id: nextjs-template
@@ -43,6 +41,4 @@ jobs:
           region: ${{ env.REGION }}
 
       - name: Show Output
-        run: |-
-          echo ${{ steps.nextjs-template.outputs.url }}
-          echo ${{ secrets.NEXT_PUBLIC_GA_ID }}
+        run: echo ${{ steps.nextjs-template.outputs.url }}
