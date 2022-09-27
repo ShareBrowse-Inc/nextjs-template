@@ -16,7 +16,7 @@
     "fix:format": "yarn inspect:format --write",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "docker:build": "docker build -t sharebrowse-nextjs-template .  --build-arg NEXT_PUBLIC_GA_ID=G-76C6FQ1D3F --progress plain",
+    "docker:build": "docker build -t sharebrowse-nextjs-template .  --build-arg NEXT_PUBLIC_GA_ID=G-52YVZH2Q0X --progress plain",
     "docker:run": "docker run -p 3000:3000 sharebrowse-nextjs-template"
   },
   "dependencies": {
