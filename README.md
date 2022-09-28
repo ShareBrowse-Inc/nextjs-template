@@ -18,7 +18,7 @@ ShareBrowse, Inc.の Next.js テンプレート
 
 以下のいずれかの前提環境が必要
 
-- Node.js v16.x
+- Node.js v18.x
 - yarn v1.x
 
 ## 開発環境構築
