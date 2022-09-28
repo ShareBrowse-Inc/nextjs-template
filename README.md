@@ -21,11 +21,15 @@ ShareBrowse, Inc.の Next.js テンプレート
 - Node.js v18.x
 - yarn v1.x
 
+または、
+
+docker v20.x
+
 ## 開発環境構築
 
-以下の方法で環境構築を行う
+事前準備を経て、以下のいずれかの方法で環境構築を行う
 
-### 方法
+### 方法 1
 
 - 以下のコマンドをターミナルで実行
 
@@ -33,6 +37,16 @@ ShareBrowse, Inc.の Next.js テンプレート
 git clone git@github.com:ShareBrowse-Inc/nextjs-template.git
 yarn
 yarn dev
+```
+
+### 方法 2
+
+- 以下のコマンドをターミナルで実行
+
+```shell
+git clone git@github.com:ShareBrowse-Inc/nextjs-template.git
+yarn docker:build
+yarn docker:run
 ```
 
 ### VSCode をエディターとして利用している方へ
