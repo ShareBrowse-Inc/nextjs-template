@@ -26,10 +26,10 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-ARG NEXT_PUBLIC_GA_ID=""
+ARG NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID=""
 
 RUN touch .env.production
-RUN echo `NEXT_PUBLIC_GA_ID=${NEXT_PUBLIC_GA_ID}` >> .env.production
+RUN echo `NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID=${NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}` >> .env.production
 RUN yarn build
 
 # If using npm comment out above and use below instead
