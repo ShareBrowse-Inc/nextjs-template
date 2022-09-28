@@ -8,5 +8,6 @@
   "facebook": "App-ID（15文字の半角数字）",
   "change-locale": "Change locale to \"{{changeTo}}\"",
   "error-with-status": "A {{statusCode}} error occurred on server",
-  "error-without-status": "An error occurred on the server"
+  "error-without-status": "An error occurred on the server",
+  "ogp": "/ogp_en.png"
 }
