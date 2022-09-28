@@ -1,3 +1,5 @@
+import { GTM_ID } from "@/lib/gtm";
+
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import i18nextConfig from "/next-i18next.config";
@@ -20,17 +22,19 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          {GTM_ID && (
+            <noscript>
+              <iframe
+                src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+                height="0"
+                width="0"
+                style={{ display: "none", visibility: "hidden" }}
+              />
+            </noscript>
+          )}
+
           <Main />
           <NextScript />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          `,
-            }}
-          />
         </body>
       </Html>
     );
