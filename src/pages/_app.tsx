@@ -81,10 +81,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           description: t("description"),
           images: [
             {
-              url: "/ogp.png",
+              url: t("ogp"),
               width: 839,
               height: 440,
-              alt: "ShareBrowse",
+              alt: t("title"),
             },
           ],
           locale: t("locale"),
