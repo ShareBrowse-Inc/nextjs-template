@@ -4,14 +4,13 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 
-import { useTranslation } from "next-i18next";
-import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 
+import { useLocale } from "@/hooks/useLocale";
 import { GTM_ID } from "@/lib/gtm";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { t } = useTranslation("common");
+  const { t } = useLocale();
 
   return (
     <>
@@ -19,8 +18,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:locale" content={t("locale")} />
-        <meta property="og:locale:alternate" content={t("alt_locale")} />
+        <meta property="og:locale" content={t.common.locale} />
+        <meta property="og:locale:alternate" content={t.common.alt_locale} />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="msapplication-TileColor" content="#faa603" />
         <meta name="theme-color" content="#faa603" />
@@ -61,33 +60,33 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       )}
       <DefaultSeo
-        titleTemplate={`%s | ${t("title")}`}
+        titleTemplate={`%s | ${t.common.title}`}
         title={undefined}
-        defaultTitle={t("title")}
-        description={t("description")}
-        canonical={t("url")}
+        defaultTitle={t.common.title}
+        description={t.common.description}
+        canonical={t.common.url}
         twitter={{
-          handle: t("twitter"),
+          handle: t.common.twitter,
           //site: t.TWITTER,
           cardType: "summary_large_image",
         }}
         facebook={{
-          appId: t("facebook"),
+          appId: t.common.facebook,
         }}
         openGraph={{
-          url: t("url"),
+          url: t.common.url,
           type: "website",
-          title: t("title"),
-          description: t("description"),
+          title: t.common.title,
+          description: t.common.description,
           images: [
             {
-              url: t("ogp"),
+              url: t.common.ogp,
               width: 839,
               height: 440,
-              alt: t("title"),
+              alt: t.common.title,
             },
           ],
-          locale: t("locale"),
+          locale: t.common.locale,
         }}
       />
 
@@ -96,4 +95,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

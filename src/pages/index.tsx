@@ -1,30 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useLocale } from "@/hooks/useLocale";
 
 import styles from "../styles/Home.module.css";
 
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  const router = useRouter();
-  const { t } = useTranslation("common");
+  const { locale, t } = useLocale();
 
-  const changeTo = router.locale === "en" ? "ja" : "en";
+  const changeTo = locale === "en" ? "ja" : "en";
 
   return (
     <div className={styles.container}>
       <main className={styles.main}>
         <Link href="/" locale={changeTo}>
-          <button>{t("change-locale", { changeTo })}</button>
+          <button>{t.common.change_locale}</button>
         </Link>
 
-        <h1 className={styles.title}>{t("title")}</h1>
+        <h1 className={styles.title}>{t.common.title}</h1>
 
-        <p className={styles.description}>{t("description")}</p>
+        <p className={styles.description}>{t.common.description}</p>
 
         <p className="">Cloud Run already Deploy</p>
 
@@ -74,12 +71,5 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-//export const getServerSideProps = async ({ locale }: { locale: string }) => ({
-export const getStaticProps = async ({ locale }: { locale: string }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common"])),
-  },
-});
 
 export default Home;
