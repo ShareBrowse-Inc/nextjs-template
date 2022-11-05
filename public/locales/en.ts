@@ -9,7 +9,7 @@ export default {
     alt_locale: "ja_JP",
     twitter: "@sharebrowse",
     facebook: "App-ID（15文字の半角数字）",
-    change_locale: 'Change locale to "{{changeTo}}"',
+    change_locale: 'Change locale to "Japanese"',
     error_with_status: "A {{statusCode}} error occurred on server",
     error_without_status: "An error occurred on the server",
     ogp: "/ogp_en.png",
