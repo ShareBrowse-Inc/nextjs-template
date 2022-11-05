@@ -1,7 +1,12 @@
 {
   "name": "nextjs-template",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShareBrowse-Inc/nextjs-template/issues",
+    "email": "contact@sharebrowse.tech"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
