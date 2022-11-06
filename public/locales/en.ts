@@ -13,5 +13,7 @@ export default {
     error_with_status: "A {{statusCode}} error occurred on server",
     error_without_status: "An error occurred on the server",
     ogp: "/ogp_en.png",
+    english: "English",
+    japanese: "Japanese",
   },
 };
