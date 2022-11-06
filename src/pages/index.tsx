@@ -1,28 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
-
 import { useLocale } from "@/hooks/useLocale";
 
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  const { locale, t } = useLocale();
-
-  const changeTo = locale === "en" ? "ja" : "en";
+  const { t } = useLocale();
 
   return (
-    <main className="flex justify-center">
-      <Link href="/" locale={changeTo}>
-        <button>{t.common.change_locale}</button>
-      </Link>
-
-      <h1 className="">{t.common.title}</h1>
-
-      <p className="">{t.common.description}</p>
-
-      <p className="">Cloud Run already Deploy</p>
-
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <main className="py-48 flex justify-center items-center border-red-400 border-2">
+      <h1 className="text-2xl">{t.common.title}</h1>
     </main>
   );
 };

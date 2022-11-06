@@ -1,5 +1,4 @@
-import { SVGProps } from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 
 import { useLocale } from "@/hooks/useLocale";
@@ -16,8 +15,13 @@ const FooterNavigation = () => {
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <Link href="/">
-              {/*<WhiteLogo className="h-12 sm:h-14" alt="ShareBrowse,Inc." />*/}
+            <Link href="https://corp.sharebrowse.tech">
+              <Image
+                src={WhiteLogo}
+                alt="ShareBrowse,Inc."
+                width={214}
+                height={60}
+              />
             </Link>
             <p className="text-sm text-white">{t.common.description}</p>
           </div>
