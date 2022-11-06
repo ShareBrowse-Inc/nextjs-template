@@ -6,6 +6,7 @@ import Script from "next/script";
 
 import { DefaultSeo } from "next-seo";
 
+import ErrorBoundary from "@/components/ErrorBoundary";
 import FooterNavigation from "@/components/FooterNavigation";
 import { useLocale } from "@/hooks/useLocale";
 import { GTM_ID } from "@/lib/gtm";
@@ -91,8 +92,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       )}
 
-      <Component {...pageProps} />
-      <FooterNavigation />
+      <ErrorBoundary>
+        <Component {...pageProps} />
+        <FooterNavigation />
+      </ErrorBoundary>
     </>
   );
 }
