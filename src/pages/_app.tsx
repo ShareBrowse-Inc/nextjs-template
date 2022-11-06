@@ -6,6 +6,7 @@ import Script from "next/script";
 
 import { DefaultSeo } from "next-seo";
 
+import FooterNavigation from "@/components/FooterNavigation";
 import { useLocale } from "@/hooks/useLocale";
 import { GTM_ID } from "@/lib/gtm";
 
@@ -14,6 +15,36 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <DefaultSeo
+        titleTemplate={`%s | ${t.common.title}`}
+        title={undefined}
+        defaultTitle={t.common.title}
+        description={t.common.description}
+        canonical={t.common.url}
+        twitter={{
+          //handle: t.common.twitter,
+          //site: t.TWITTER,
+          cardType: "summary_large_image",
+        }}
+        //facebook={{
+        //    appId: t.common.facebook,
+        //}}
+        openGraph={{
+          url: t.common.url,
+          type: "website",
+          title: t.common.title,
+          description: t.common.description,
+          images: [
+            {
+              url: t.common.ogp,
+              width: 839,
+              height: 440,
+              alt: t.common.title,
+            },
+          ],
+          locale: t.common.locale,
+        }}
+      />
       <Head>
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,38 +90,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           }}
         />
       )}
-      <DefaultSeo
-        titleTemplate={`%s | ${t.common.title}`}
-        title={undefined}
-        defaultTitle={t.common.title}
-        description={t.common.description}
-        canonical={t.common.url}
-        twitter={{
-          handle: t.common.twitter,
-          //site: t.TWITTER,
-          cardType: "summary_large_image",
-        }}
-        facebook={{
-          appId: t.common.facebook,
-        }}
-        openGraph={{
-          url: t.common.url,
-          type: "website",
-          title: t.common.title,
-          description: t.common.description,
-          images: [
-            {
-              url: t.common.ogp,
-              width: 839,
-              height: 440,
-              alt: t.common.title,
-            },
-          ],
-          locale: t.common.locale,
-        }}
-      />
 
       <Component {...pageProps} />
+      <FooterNavigation />
     </>
   );
 }
