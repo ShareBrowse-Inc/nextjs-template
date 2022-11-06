@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://nextjs-template.sharebrowse.tech
-
-# Sitemaps
-Sitemap: https://nextjs-template.sharebrowse.tech/sitemap.xml

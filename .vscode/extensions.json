@@ -9,7 +9,6 @@
     "eamodio.gitlens",
     "seatonjiang.gitmoji-vscode",
     "oderwat.indent-rainbow",
-    "ms-ceintl.vscode-language-pack-ja",
     "bierner.markdown-preview-github-styles",
     "davidanson.vscode-markdownlint",
     "pnp.polacode",
@@ -21,6 +20,8 @@
     "tomoki1207.pdf",
     "mosapride.zenkaku",
     "unifiedjs.vscode-mdx",
-    "googlecloudtools.cloudcode"
+    "googlecloudtools.cloudcode",
+    "bradlc.vscode-tailwindcss",
+    "PulkitGangwar.nextjs-snippets"
   ]
 }

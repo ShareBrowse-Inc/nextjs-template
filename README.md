@@ -1,37 +1,37 @@
 # Next.js Template
 
-ShareBrowse, Inc.の Next.js テンプレート
+Next.js Template from ShareBrowse, Inc.
 
-[デモ](https://nextjs-template.sharebrowse.tech/)
+[DEMO](https://nextjs-template.sharebrowse.tech/)
 
 [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=https://github.com/ShareBrowse-Inc/nextjs-template.git)
 
-## 技術概要
+## Technology
 
-- Next.js（React フレームワーク）
-- TypeScript（型導入）
-- Prettier（コードの整形）
-- ESLint（構文チェック）
-- Storybook（コンポーネントカタログ）
+- [Next.js](https://nextjs.org/)
+- TypeScript
+- Prettier
+- ESLint
+- Storybook
 
-## 依存関係
+## Preparation
 
-以下のいずれかの前提環境が必要
+The following prerequisite environment is required.
 
 - Node.js v18.x
 - yarn v1.x
 
-または、
+or
 
 docker v20.x
 
-## 開発環境構築
+## Development Environment
 
-事前準備を経て、以下のいずれかの方法で環境構築を行う
+After preparation, build the environment.
 
-### 方法 1
+### Method 1
 
-- 以下のコマンドをターミナルで実行
+- Execute the following commands in a terminal.
 
 ```shell
 git clone git@github.com:ShareBrowse-Inc/nextjs-template.git
@@ -39,9 +39,9 @@ yarn
 yarn dev
 ```
 
-### 方法 2
+### Method 2
 
-- 以下のコマンドをターミナルで実行
+- Execute the following commands in a terminal.
 
 ```shell
 git clone git@github.com:ShareBrowse-Inc/nextjs-template.git
@@ -49,14 +49,14 @@ yarn docker:build
 yarn docker:run
 ```
 
-### VSCode をエディターとして利用している方へ
+### For those who use VSCode as an editor
 
-開発時に推奨する拡張機能を本リポジトリにて共有しているので、インストールする（方法はこのページを[参照](https://qiita.com/Glavis/items/c3dac07e4bcf5c50db0a#%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)）
+Recommended extensions are shared in this repository for installation during development.（[reference](https://qiita.com/Glavis/items/c3dac07e4bcf5c50db0a#%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B)）
 
-## ブランチ運用
+## Branch Management
 
-[Gitflow ワークフロー](https://www.atlassian.com/ja/git/tutorials/comparing-workflows/gitflow-workflow)に準じて運用する
+Operate according to [Gitflow Workflow](https://www.atlassian.com/ja/git/tutorials/comparing-workflows/gitflow-workflow)
 
-## コミットメッセージ
+## Commit Message
 
-[gitmoji](https://gitmoji.dev/)に準じて絵文字 prefix をつけたコミットメッセージを書くことを推奨（[cli](https://github.com/carloscuesta/gitmoji)もある）
+Recommend writing commit messages with emoji prefixes according to [gitmoji](https://gitmoji.dev/) (also available in [cli](https://github.com/carloscuesta/gitmoji))
