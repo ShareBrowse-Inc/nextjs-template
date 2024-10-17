@@ -41,7 +41,7 @@
     "@storybook/manager-webpack5": "6.5.13",
     "@storybook/react": "6.5.13",
     "@storybook/testing-library": "0.0.13",
-    "@types/node": "18.11.9",
+    "@types/node": "20.16.12",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
     "autoprefixer": "10.4.13",
