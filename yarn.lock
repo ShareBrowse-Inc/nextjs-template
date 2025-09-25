@@ -7923,10 +7923,10 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.1.tgz#26c8a3cee6cc05fbcf1e333cd2fc3e003326c0b5"
   integrity sha512-9iN1ka/9zmX1ZvLV9ewJYEk9h7RyRRtqdK0woXcqohu8EWIerfPUjYJPg0ULy0UqP7cslmdGc8xKDJcojlKiaw==
 
-next-seo@5.14.0:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.14.0.tgz#961376571d50c76c3d469c607900774065f62907"
-  integrity sha512-VpbVFXbDzy31qoKBH7xoxtzh+nDhEWYOBnlc18zkXmypRd3X9vxdwh7rlr3q2BQTfbfk2J/a6Y2vEb+oTcCW0w==
+next-seo@6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-6.8.0.tgz#0265ec75ad5ddca3d2a11dd86534a15065043651"
+  integrity sha512-zcxaV67PFXCSf8e6SXxbxPaOTgc8St/esxfsYXfQXMM24UESUVSXFm7f2A9HMkAwa0Gqn4s64HxYZAGfdF4Vhg==
 
 next-sitemap@3.1.30:
   version "3.1.30"
